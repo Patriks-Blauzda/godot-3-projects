@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://outline.gdshader" type="Shader" id=1]
+[ext_resource path="res://Updraft.gd" type="Script" id=2]
+
+[sub_resource type="ParticlesMaterial" id=1]
+emission_shape = 5
+emission_ring_radius = 70.0
+emission_ring_inner_radius = 40.0
+emission_ring_height = 1.0
+emission_ring_axis = Vector3( 0, 1, 0 )
+direction = Vector3( 0, 1, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 50.0
+scale = 2.0
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = ExtResource( 1 )
+shader_param/outline_color = null
+shader_param/outline_width = 1.0
+
+[sub_resource type="SpatialMaterial" id=4]
+next_pass = SubResource( 3 )
+
+[sub_resource type="SphereMesh" id=2]
+material = SubResource( 4 )
+radius = 0.5
+height = 1.0
+
+[sub_resource type="CylinderShape" id=5]
+height = 200.0
+radius = 83.4299
+
+[node name="Updraft" type="Particles"]
+amount = 60
+lifetime = 4.0
+speed_scale = 3.5
+visibility_aabb = AABB( -68, 0, -68, 138, 224, 138 )
+process_material = SubResource( 1 )
+draw_pass_1 = SubResource( 2 )
+script = ExtResource( 2 )
+
+[node name="Area" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.5894, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Area"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 100, 0 )
+shape = SubResource( 5 )
+
+[connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
+[connection signal="body_exited" from="Area" to="." method="_on_Area_body_exited"]

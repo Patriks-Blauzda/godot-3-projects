@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/yoda.mp3-02e596bc5eee2bb02d14431a626d8980.mp3str"
+
+[deps]
+
+source_file="res://yoda.mp3"
+dest_files=[ "res://.import/yoda.mp3-02e596bc5eee2bb02d14431a626d8980.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

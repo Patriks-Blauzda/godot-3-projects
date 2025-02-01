@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/reloade.mp3-24469bb4e77227a639df8a5c497016fe.mp3str"
+
+[deps]
+
+source_file="res://reloade.mp3"
+dest_files=[ "res://.import/reloade.mp3-24469bb4e77227a639df8a5c497016fe.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

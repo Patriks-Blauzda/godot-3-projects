@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/lmg_fire01.mp3-5c40535b662838f1bd0bb842dc5941c3.mp3str"
+
+[deps]
+
+source_file="res://lmg_fire01.mp3"
+dest_files=[ "res://.import/lmg_fire01.mp3-5c40535b662838f1bd0bb842dc5941c3.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
